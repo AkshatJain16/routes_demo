@@ -1,5 +1,14 @@
 {
+  "name": "node-js-implementation",
+  "main": "test.js",
+  "scripts": {
+    "start": "node test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
+    "fs": "^0.0.1-security",
     "http": "^0.0.1-security"
   }
 }
