@@ -2,17 +2,22 @@ const express = require('express');
 
 const app = express();
 
-//Custom middleware
-const userMiddleware = (req, res, next) => {
-    req.user = "Guest";
-    next();
-};
+app.get('/orders', (req, res) => {
+    res.send("Here is the list of all orders.")
+});
 
-//Welcome route
-app.get('/welcome', userMiddleware, (req, res) => {
-    res.send(`<h1>Welcome, ${req.user}!</h1>`);
+app.post('/orders', (req, res) => {
+    res.send("A new order has been created.")
+}); 
+
+app.get('/users', (req, res) => {
+    res.send("Here is the list of all users.")
+});
+
+app.post('/users', (req, res) => {
+    res.send("A new user has been created.")
 });
 
 app.listen(3000, () => {
-    console.log('Server is running on port 3000');
+    console.log('Server is running on https://localhost:3000');
 });
