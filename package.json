@@ -2,13 +2,17 @@
   "name": "node-js-implementation",
   "main": "test.js",
   "scripts": {
-    "start": "node test.js"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^5.2.1",
     "fs": "^0.0.1-security",
     "http": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }
