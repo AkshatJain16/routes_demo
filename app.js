@@ -1,15 +1,16 @@
 const express = require('express');
 
 const app = express();
+const port = 3000;
 
-const cartRoutes = require('./routes/cart');
-const productRoutes = require('./routes/products');
-const userRoutes = require('./routes/users');
+const cartRoutes = require('./routes/cartRoutes');
+const productRoutes = require('./routes/productRoutes');
+const userRoutes = require('./routes/userRoutes');
 
-app.use('/cart', cartRoutes);
-app.use('/products', productRoutes);
-app.use('/users', userRoutes);
+app.use('/api/cart', cartRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/users', userRoutes);
 
-app.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
 });
