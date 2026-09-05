@@ -16,8 +16,9 @@ const getProductById = (req, res) => {
 
 //POST /products
 const postProducts = (req, res) => {
-    const result = productService.addProduct(req.body);
-    res.send(result);
+    const data = req.body;
+    console.log(data);
+    res.json({ value: data.productName });
 }
 
  
