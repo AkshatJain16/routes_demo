@@ -4,6 +4,12 @@ const getUsers = (req, res) => {
 
 const getUserById = (req, res) => {
     const userId = req.params.id;
+
+    if(!userId) {
+        const error = new Error('User ID is required');
+        error.statusCode = 400;
+        throw error;
+    }
     res.send(`Fetching user with ID: ${userId}`);
 }
 
